@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 
 class StyledText extends StatelessWidget{
 
-  const StyledText({super.key});
+  const StyledText(this.text,{super.key});
+  final String text;
 
   @override
   Widget build(BuildContext context) {
    
     return Text(
-              'Final dice roll app',
+              text,
               style: TextStyle(color: Colors.white, fontSize: 25),
             );
   }

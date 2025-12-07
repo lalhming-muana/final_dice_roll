@@ -4,23 +4,22 @@ import 'package:flutter/material.dart';
 
 class GradientContainer extends StatelessWidget {
 
-  const GradientContainer({super.key});
+  const GradientContainer(this.color1, this.color2,{super.key});
+  final Color color1;
+  final Color color2;
 
   @override
   Widget build(BuildContext context) {
     return Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [
-                Color.fromARGB(255, 141, 100, 212),
-                Color.fromARGB(255, 110, 42, 228),
-              ],
+              colors: [color1,color2,],
               begin: Alignment.bottomLeft,
               end: Alignment.topRight,
             ),
           ),
           child: Center(
-            child: StyledText(),
+            child: StyledText('Final dice-app'),
           ),
         );
   }
